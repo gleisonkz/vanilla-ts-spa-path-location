@@ -25,7 +25,7 @@ export class Router {
     return Router.$app;
   }
 
-  async watch(): Promise<void> {
+  async navigate(): Promise<void> {
     let matchedRoute = ROUTES.map((route) => {
       const pattern = this.pathToRegexPattern(route.path);
       const currentPath = location.pathname;

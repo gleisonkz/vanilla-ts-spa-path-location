@@ -2,7 +2,7 @@ import { Router } from './classes/router';
 
 const navigateTo = (path: string) => {
   history.pushState(null, "", path);
-  Router.instance.watch();
+  Router.instance.navigate();
 };
 
 const setAnchorListener = (event: Event) => {
@@ -20,5 +20,5 @@ const setAnchorListener = (event: Event) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", setAnchorListener);
-  Router.instance.watch();
+  Router.instance.navigate();
 });
