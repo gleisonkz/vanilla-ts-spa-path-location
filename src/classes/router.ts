@@ -1,17 +1,19 @@
+import { Route } from '../models/route';
 import { AboutPage } from '../pages/about.page';
+import { AnimeDetailPage } from '../pages/anime-detail.page';
 import { AnimesPage } from '../pages/animes.page';
 import { HomePage } from '../pages/home.page';
 
-const ROUTES = [
+const ROUTES: Route[] = [
   { path: "/", page: HomePage },
   { path: "/animes", page: AnimesPage },
-  // { path: "/posts/:id", page: PostView },
+  { path: "/animes/:id", page: AnimeDetailPage },
   { path: "/about", page: AboutPage },
 ];
 
 export class Router {
   private static _instance: Router;
-  private static $app = document.querySelector("#app");
+  private _$app = document.querySelector("#app");
 
   private constructor() {}
 
@@ -21,8 +23,8 @@ export class Router {
   }
 
   private get $app(): Element {
-    if (!Router.$app) throw new Error("No app element found");
-    return Router.$app;
+    if (!this._$app) throw new Error("No app element found");
+    return this._$app;
   }
 
   async navigate(): Promise<void> {
@@ -42,7 +44,7 @@ export class Router {
       };
     }
 
-    const params = "";
+    const params = this.getParams(matchedRoute);
     const Page = matchedRoute.route.page;
     const pageObj = new Page(params);
     const $page = await pageObj.getPage();
@@ -57,5 +59,20 @@ export class Router {
 
   pathToRegexPattern(path: string): string {
     return path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$";
+  }
+
+  getParams({ route, match }: any) {
+    const values = match.slice(1);
+
+    const iterator = route.path.matchAll(/:(\w+)/g);
+    const params = Array.from(iterator);
+    const keys = params.map(([_, second]) => second);
+    const paramObject = Object.fromEntries(
+      keys.map((key, i) => {
+        return [key, values[i]];
+      })
+    );
+
+    return paramObject;
   }
 }
