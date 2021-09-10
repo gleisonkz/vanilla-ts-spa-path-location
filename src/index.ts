@@ -30,11 +30,9 @@ const router = async () => {
   let targetRoute = ROUTES.map((route) => {
     const pattern = pathToRegexPattern(route.path);
     const currentPath = location.pathname;
+    const match = currentPath.match(pattern);
 
-    return {
-      route: route,
-      match: currentPath.match(pattern),
-    };
+    return { route, match };
   }).find((route) => route.match);
 
   if (!targetRoute) {
