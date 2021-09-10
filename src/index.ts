@@ -1,3 +1,4 @@
+import { AboutPage } from './pages/about.page';
 import { AnimesPage } from './pages/animes.page';
 import { HomePage } from './pages/home.page';
 
@@ -7,7 +8,7 @@ const ROUTES = [
   { path: "/", page: HomePage },
   { path: "/animes", page: AnimesPage },
   // { path: "/posts/:id", page: PostView },
-  // { path: "/settings", page: Settings },
+  { path: "/about", page: AboutPage },
 ];
 
 const pathToRegexPattern = (path: string) =>
