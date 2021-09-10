@@ -32,6 +32,7 @@ const router = async () => {
   let targetRoute = ROUTES.map((route) => {
     const pattern = pathToRegexPattern(route.path);
     const currentPath = location.pathname;
+
     const match = currentPath.match(pattern);
 
     return { route, match };
@@ -53,13 +54,16 @@ const router = async () => {
 
 const setAnchorListener = (event: Event) => {
   event.preventDefault();
-  const element = event.target;
-  const isAnchorElement = element instanceof HTMLAnchorElement;
-
-  if (!isAnchorElement) return;
-
+  const element = event.target as HTMLElement;
   const hasDataLink = element.matches("[router-link]");
-  if (hasDataLink) navigateTo(element.href);
+  console.log(element);
+  if (!hasDataLink) return;
+  console.log(element);
+
+  const path = element.getAttribute("router-link");
+  if (!path) throw new Error("No path found");
+
+  navigateTo(path);
 };
 
 document.addEventListener("DOMContentLoaded", () => {

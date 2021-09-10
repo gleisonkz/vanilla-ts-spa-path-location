@@ -25,12 +25,10 @@ export class AnimesPage extends AbstractPage {
       .map((title, index) => {
         const id = ++index;
 
-        return `
-        <p class="anime-item" id="${title}">
-          <a href="/animes/${title}" router-link>
+        return `        
+          <a class="anime-item" router-link="/animes/${title}">
             <span>${id}</span> - <span>${title}</span>
-          </a>
-        </p>
+          </a>        
       `;
       })
       .join("");
@@ -49,6 +47,11 @@ export class AnimesPage extends AbstractPage {
     .anime-item a,
     .anime-item span {
       color: var(--color-text-on-surface);
+      transition: color 0.2s ease;
+    }
+
+    .anime span {
+      pointer-events: none;
     }
   
     .anime-item{
@@ -58,10 +61,12 @@ export class AnimesPage extends AbstractPage {
       color: var(--color-text-on-surface);
       padding: 10px;    
       cursor: pointer;
-      transition: color 0.3s ease;
+      transition: color 0.2s ease;
     }  
   
-    .anime-item:hover {
+    .anime-item:hover,
+    .anime-item:hover a,
+    .anime-item:hover span {
       color: var(--color-primary);
     }
   
@@ -74,7 +79,7 @@ export class AnimesPage extends AbstractPage {
       border-radius: 9px;
       background-color: var(--color-primary);;
       color: var(--color-text-on-primary);; 
-      transition: opacity 0.3s ease;
+      transition: opacity 0.2s ease;
     } 
   
     .anime-item:hover a,

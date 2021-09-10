@@ -23,7 +23,7 @@ export class HomePage extends AbstractPage {
         Teste de uma aplicação SPA utilizando apenas TS e Parcel, sem framework.
     </p>
     <p>
-        <a href="/animes" router-link>View recent animes</a>
+        <a router-link="/animes" >View recent animes</a>
     </p>
 
     
@@ -45,6 +45,7 @@ export class HomePage extends AbstractPage {
          display: block;
          margin-bottom: 1rem;
          transition: opacity 0.2s;
+         cursor: pointer;
     }   
     
     .home a:hover {

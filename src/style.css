@@ -44,6 +44,7 @@ a {
 ul li {
   padding: 2px;
   font-size: 30px;
+  cursor: pointer;
 }
 
 nav a {
