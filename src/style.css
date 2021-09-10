@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #00be92;
+  --color-surface: #fff;
+  --color-background: #f2fbf8;
+  --color-text-on-primary: #fff;
+  --color-text-on-surface: #afb2b3;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+}
+
+aside {
+  background-color: var(--color-primary);
+  padding: 20px;
+  height: 100%;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  padding: 2px;
+  font-size: 30px;
+}
+
+a {
+  color: var(--color-text-on-primary);
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+main {
+  background-color: var(--color-background);
+  padding: 20px;
+}
+
+p {
+  margin-top: 6px;
+}
+
+.instagram {
+  content: url(./images/instagram.png);
+}
+.linkedin {
+  content: url(./images/linkedin.svg);
+}
+.youtube {
+  content: url(./images/youtube.png);
+}
+.medium {
+  content: url(./images/medium.svg);
+}
+.github {
+  content: url(./images/github.svg);
+}
