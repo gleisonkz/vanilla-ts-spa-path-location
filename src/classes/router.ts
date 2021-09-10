@@ -4,6 +4,15 @@ import { AnimeDetailPage } from '../pages/anime-detail.page';
 import { AnimesPage } from '../pages/animes.page';
 import { HomePage } from '../pages/home.page';
 
+interface ParamMap {
+  [key: string]: string;
+}
+
+interface RegExpMatchRoute {
+  route: Route;
+  match: RegExpMatchArray;
+}
+
 const ROUTES: Route[] = [
   { path: "/", page: HomePage },
   { path: "/animes", page: AnimesPage },
@@ -30,9 +39,9 @@ export class Router {
   async navigate(): Promise<void> {
     let matchedRoute = ROUTES.map((route) => {
       const pattern = this.pathToRegexPattern(route.path);
-      const currentPath = location.pathname;
+      const targetLocation = location.pathname;
 
-      const match = currentPath.match(pattern);
+      const match = targetLocation.match(pattern)!;
 
       return { route, match };
     }).find((route) => route.match);
@@ -61,17 +70,14 @@ export class Router {
     return path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$";
   }
 
-  getParams({ route, match }: any) {
-    const values = match.slice(1);
+  getParams({ route, match }: RegExpMatchRoute): ParamMap {
+    const paramValues = match!.slice(1);
 
     const iterator = route.path.matchAll(/:(\w+)/g);
     const params = Array.from(iterator);
     const keys = params.map(([_, second]) => second);
-    const paramObject = Object.fromEntries(
-      keys.map((key, i) => {
-        return [key, values[i]];
-      })
-    );
+    const entries = keys.map((key, index) => [key, paramValues[index]]);
+    const paramObject = Object.fromEntries(entries);
 
     return paramObject;
   }
