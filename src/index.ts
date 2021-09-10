@@ -1,10 +1,11 @@
+import { AnimesPage } from './pages/animes.page';
 import { HomePage } from './pages/home.page';
 
 const $app = document.querySelector("#app");
 
 const ROUTES = [
   { path: "/", page: HomePage },
-  // { path: "/posts", page: Posts },
+  { path: "/animes", page: AnimesPage },
   // { path: "/posts/:id", page: PostView },
   // { path: "/settings", page: Settings },
 ];

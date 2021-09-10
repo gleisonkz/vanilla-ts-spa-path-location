@@ -8,7 +8,7 @@
 :root {
   --color-primary: #2862a0;
   --color-primary-light: #9cccff;
-  --color-surface: #fff;
+  --color-surface: #00000073;
   --color-background: #040606d6;
   --color-text-on-primary: #fff;
   --color-text-on-surface: white;
@@ -35,6 +35,10 @@ aside {
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 ul li {

@@ -5,7 +5,7 @@ export abstract class AbstractPage {
     document.title = title;
   }
 
-  abstract getHtml(): Promise<string>;
+  abstract getHtml<T>(param: T | T[]): Promise<string>;
   abstract getStyles(): Promise<HTMLStyleElement>;
   abstract getPage(): Promise<HTMLElement>;
 }
