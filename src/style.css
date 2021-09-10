@@ -6,11 +6,12 @@
 }
 
 :root {
-  --color-primary: #222222;
+  --color-primary: #2862a0;
+  --color-primary-light: #9cccff;
   --color-surface: #fff;
-  --color-background: #f2fbf8;
+  --color-background: #040606d6;
   --color-text-on-primary: #fff;
-  --color-text-on-surface: #afb2b3;
+  --color-text-on-surface: white;
   --color-menu-hover: #ffffff0d;
 }
 
@@ -41,7 +42,7 @@ ul li {
   font-size: 30px;
 }
 
-a {
+nav a {
   color: var(--color-text-on-primary);
   display: block;
   padding: 12px 18px;
@@ -50,7 +51,7 @@ a {
   transition: background-color 0.2s;
 }
 
-a:hover {
+nav a:hover {
   background-color: var(--color-menu-hover);
 }
 
@@ -61,6 +62,14 @@ main {
 
 p {
   margin-top: 6px;
+}
+p,
+h1 {
+  color: var(--color-text-on-surface);
+}
+
+h1 {
+  margin-bottom: 20px;
 }
 
 .instagram {
