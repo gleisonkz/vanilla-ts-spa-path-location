@@ -6,4 +6,6 @@ export abstract class AbstractPage {
   }
 
   abstract getHtml(): Promise<string>;
+  abstract getStyles(): Promise<HTMLStyleElement>;
+  abstract getPage(): Promise<HTMLElement>;
 }
