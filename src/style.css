@@ -6,11 +6,12 @@
 }
 
 :root {
-  --color-primary: #00be92;
+  --color-primary: #222222;
   --color-surface: #fff;
   --color-background: #f2fbf8;
   --color-text-on-primary: #fff;
   --color-text-on-surface: #afb2b3;
+  --color-menu-hover: #ffffff0d;
 }
 
 html,
@@ -27,7 +28,6 @@ body {
 
 aside {
   background-color: var(--color-primary);
-  padding: 20px;
   height: 100%;
   min-height: 100vh;
 }
@@ -43,10 +43,15 @@ ul li {
 
 a {
   color: var(--color-text-on-primary);
+  display: block;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
 }
 
 a:hover {
-  opacity: 0.6;
+  background-color: var(--color-menu-hover);
 }
 
 main {
