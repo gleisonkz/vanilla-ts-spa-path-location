@@ -46,6 +46,8 @@ Deploy efetuado no [Netlify](https://www.netlify.com/) para visualizar: [Clique 
 
 Projeto de demonstração de um SPA feito com o Vanilla TS. Utilizando apenas parcel e typescript.
 
+com o intuito de implementar e entender melhor o funcionamento do roteamento de um SPA baseando-se no Window.location utilização do parcel como bundler.
+
 Toda a parte de roteamento foi feita do 0 sem utilização de frameworks.
 
 As páginas também realizam o consumo da api Animechan para obter os dados dos animes.
