@@ -1,10 +1,10 @@
-import { Route } from '../models/route';
 import { AboutPage } from '../pages/about.page';
 import { AnimeDetailPage } from '../pages/anime-detail.page';
 import { AnimesPage } from '../pages/animes.page';
 import { HomePage } from '../pages/home.page';
+import { AbstractPage } from './abstract-page';
 
-interface ParamMap {
+export interface ParamMap {
   [key: string]: string;
 }
 
@@ -13,16 +13,20 @@ interface RegExpMatchRoute {
   match: RegExpMatchArray;
 }
 
-const ROUTES: Route[] = [
-  { path: "/", page: HomePage },
-  { path: "/animes", page: AnimesPage },
-  { path: "/animes/:id", page: AnimeDetailPage },
-  { path: "/about", page: AboutPage },
-];
+interface Route {
+  path: string;
+  page: new (params: ParamMap) => AbstractPage;
+}
 
 export class Router {
   private static _instance: Router;
   private _$app = document.querySelector("#app");
+  private readonly _routes: Route[] = [
+    { path: "/", page: HomePage },
+    { path: "/animes", page: AnimesPage },
+    { path: "/animes/:id", page: AnimeDetailPage },
+    { path: "/about", page: AboutPage },
+  ];
 
   private constructor() {}
 
@@ -37,18 +41,20 @@ export class Router {
   }
 
   async navigate(): Promise<void> {
-    let matchedRoute = ROUTES.map((route) => {
-      const pattern = this.pathToRegexPattern(route.path);
-      const targetLocation = location.pathname;
+    let matchedRoute = this._routes
+      .map((route) => {
+        const pattern = this.pathToRegexPattern(route.path);
+        const targetLocation = location.pathname;
 
-      const match = targetLocation.match(pattern)!;
+        const match = targetLocation.match(pattern)!;
 
-      return { route, match };
-    }).find((route) => route.match);
+        return { route, match };
+      })
+      .find((route) => route.match);
 
     if (!matchedRoute) {
       matchedRoute = {
-        route: ROUTES[0],
+        route: this._routes[0],
         match: [location.pathname],
       };
     }
@@ -78,6 +84,8 @@ export class Router {
     const keys = params.map(([_, second]) => second);
     const entries = keys.map((key, index) => [key, paramValues[index]]);
     const paramObject = Object.fromEntries(entries);
+
+    console.log(paramObject);
 
     return paramObject;
   }
