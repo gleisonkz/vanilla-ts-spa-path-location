@@ -1,7 +1,7 @@
 {
-  "name": "vanilla-js-spa",
+  "name": "vanilla-ts-spa",
   "version": "1.0.0",
-  "description": "A Simple vanilla-js spa app build with no frameworks and parcel builder",
+  "description": "A Simple vanilla-ts spa app build with no frameworks and parcel builder using path location",
   "scripts": {
     "start": "parcel ./src/index.html --open",
     "build": "parcel build ./src/index.html --detailed-report"

@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Project Logo" src=".github/logo.jpg" width="250px"/>
+  <img alt="Project Logo" src=".github/logo.png" width="250px"/>
 </p>
 
 <p align="center"> 
@@ -32,9 +32,9 @@
 
 Deploy efetuado no [Netlify](https://www.netlify.com/) para visualizar: [Clique Aqui](https://vanilla-js-spa.netlify.app/)
 
-|                    :computer:Preview 1                     |                    :computer: Preview 2                    |
-| :--------------------------------------------------------: | :--------------------------------------------------------: |
-| <kbd><img src=".github/preview-1.png" alt="Tablet"/></kbd> | <kbd><img src=".github/preview-2.png" alt="Mobile"/></kbd> |
+|                         :computer:Preview 1                         |                        :computer: Preview 2                         |
+| :-----------------------------------------------------------------: | :-----------------------------------------------------------------: |
+| <kbd><img src=".github/preview-1.png" alt="Preview Image 1"/></kbd> | <kbd><img src=".github/preview-2.png" alt="Preview Image 1"/></kbd> |
 
 </div>
   
@@ -44,11 +44,13 @@ Deploy efetuado no [Netlify](https://www.netlify.com/) para visualizar: [Clique 
 
 <div align="center">
 
-Projeto de demonstração de um SPA feito com o Vanilla JS. Utilizando parcel para compilar o código.
+Projeto de demonstração de um SPA feito com o Vanilla TS. Utilizando apenas parcel e typescript.
 
-Consumindo a api Animechan para obter os dados dos animes.
+Toda a parte de roteamento foi feita do 0 sem utilização de frameworks.
 
-E listar citações de cada personagem de um determinado anime.
+As páginas também realizam o consumo da api Animechan para obter os dados dos animes.
+
+E listar citações de cada personagem de um determinado anime na página de detalhes.
 
 ---
 
@@ -60,7 +62,7 @@ E listar citações de cada personagem de um determinado anime.
 
 Para executar esse projeto você precisa baixar este repositório, ter o Gerenciador de Pacotes do Node ([`NPM`](https://www.npmjs.com/get-npm)) ou o Gerenciador de Pacotes YARN ([`YARN`](https://yarnpkg.com/getting-started)) instalado.
 
-Abra o prompt de comando no diretório do projeto na pasta <code>vanilla-js-spa</code>, e execute os seguintes códigos:
+Abra o prompt de comando no diretório do projeto na pasta <code>vanilla-ts-spa</code>, e execute os seguintes códigos:
 
 <details>
   <summary><i>com <b>npm</b></i></summary>
@@ -120,7 +122,6 @@ $ yarn start
 |        :page_facing_up:        |
 | :----------------------------: |
 |         CSS Variables          |
-|     Path Location Routing      |
 |          ES6 Modules           |
 |           fetch API            |
 |          Async Await           |
@@ -129,8 +130,8 @@ $ yarn start
 |        Index Signatures        |
 |       Singleton Pattern        |
 |    Template Method Pattern     |
-|         Class Heritage         |
 |          History API           |
+|     Path Location Routing      |
 
 </div>
 
