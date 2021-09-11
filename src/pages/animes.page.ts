@@ -1,8 +1,9 @@
 import { AbstractPage } from '../classes/abstract-page';
 import { AnimesService } from '../classes/animes.service';
+import { ParamMap } from '../classes/router';
 
 export class AnimesPage extends AbstractPage {
-  constructor(params: string) {
+  constructor(params: ParamMap) {
     super(params);
     this.setTitle("Animes");
   }

@@ -1,7 +1,8 @@
 import { AbstractPage } from '../classes/abstract-page';
+import { ParamMap } from '../classes/router';
 
 export class HomePage extends AbstractPage {
-  constructor(params: string) {
+  constructor(params: ParamMap) {
     super(params);
     this.setTitle("Home");
   }
