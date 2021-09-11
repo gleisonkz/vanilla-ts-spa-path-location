@@ -7,20 +7,9 @@ export class AnimesPage extends AbstractPage {
     this.setTitle("Animes");
   }
 
-  async getPage(): Promise<HTMLElement> {
-    const $page = document.createElement("div");
-    $page.classList.add("anime");
-
+  async getHtml(): Promise<string> {
     const animes = await AnimesService.getAnimes();
 
-    const html = await this.getHtml(animes);
-    const styles = await this.getStyles();
-    $page.innerHTML = html;
-    $page.appendChild(styles);
-    return $page;
-  }
-
-  async getHtml<T>(animes: T[]): Promise<string> {
     const html = animes
       .map((title, index) => {
         const id = ++index;
@@ -38,8 +27,9 @@ export class AnimesPage extends AbstractPage {
 
   async getStyles(): Promise<HTMLStyleElement> {
     const $style = document.createElement("style");
+
     $style.innerHTML = `
-    .anime{
+    .animes{
       display: grid;
       row-gap: 20px;
     }
@@ -50,7 +40,7 @@ export class AnimesPage extends AbstractPage {
       transition: color 0.2s ease;
     }
 
-    .anime span {
+    .animes span {
       pointer-events: none;
     }
   

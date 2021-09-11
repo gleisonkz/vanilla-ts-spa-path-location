@@ -6,16 +6,6 @@ export class HomePage extends AbstractPage {
     this.setTitle("Home");
   }
 
-  async getPage(): Promise<HTMLElement> {
-    const $page = document.createElement("div");
-    $page.classList.add("home");
-    const html = await this.getHtml();
-    const styles = await this.getStyles();
-    $page.innerHTML = html;
-    $page.appendChild(styles);
-    return $page;
-  }
-
   async getHtml(): Promise<string> {
     return `
     <h1>Home</h1>

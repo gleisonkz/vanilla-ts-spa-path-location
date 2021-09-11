@@ -6,16 +6,6 @@ export class AboutPage extends AbstractPage {
     this.setTitle("About");
   }
 
-  async getPage(): Promise<HTMLElement> {
-    const $page = document.createElement("div");
-    $page.classList.add("about");
-    const html = await this.getHtml();
-    const styles = await this.getStyles();
-    $page.innerHTML = html;
-    $page.appendChild(styles);
-    return $page;
-  }
-
   async getHtml(): Promise<string> {
     return `
     <address>

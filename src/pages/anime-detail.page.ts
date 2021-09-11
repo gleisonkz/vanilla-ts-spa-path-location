@@ -1,6 +1,5 @@
 import { AbstractPage } from '../classes/abstract-page';
 import { AnimesService } from '../classes/animes.service';
-import { Quote } from '../models/quote';
 
 export class AnimeDetailPage extends AbstractPage {
   constructor(params: string) {
@@ -8,20 +7,9 @@ export class AnimeDetailPage extends AbstractPage {
     this.setTitle("Anime Detail");
   }
 
-  async getPage(): Promise<HTMLElement> {
-    const $page = document.createElement("div");
-    $page.classList.add("anime");
-
+  async getHtml(): Promise<string> {
     const quotes = await AnimesService.getAnimeQuotes(this.params.id);
 
-    const html = await this.getHtml(quotes);
-    const styles = await this.getStyles();
-    $page.innerHTML = html;
-    $page.appendChild(styles);
-    return $page;
-  }
-
-  async getHtml(quotes: Quote[]): Promise<string> {
     const html = quotes
       .map(({ quote, character }) => {
         return `        
