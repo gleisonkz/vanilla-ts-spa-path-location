@@ -3,8 +3,8 @@
 </p>
 
 <p align="center"> 
-  <img alt="Top Language" src="https://img.shields.io/github/languages/top/gleisonkz/vanilla-ts-spa?color=3498db&style=for-the-badge">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gleisonkz/vanilla-ts-spa?color=3498db&style=for-the-badge&label=Ultimo%20Commit">   
+  <img alt="Top Language" src="https://img.shields.io/github/languages/top/gleisonkz/vanilla-ts-spa-path-location?color=3498db&style=for-the-badge">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gleisonkz/vanilla-ts-spa-path-location?color=3498db&style=for-the-badge&label=Ultimo%20Commit">   
   <a href="https://github.com/gleisonkz">
     <img alt="Developed by Gleison" src="https://img.shields.io/badge/Developer-Gleison-%3498db?color=3498db&style=for-the-badge&label=Desenvolvedor">
   </a>  
@@ -62,7 +62,7 @@ E listar citações de cada personagem de um determinado anime na página de det
 
 Para executar esse projeto você precisa baixar este repositório, ter o Gerenciador de Pacotes do Node ([`NPM`](https://www.npmjs.com/get-npm)) ou o Gerenciador de Pacotes YARN ([`YARN`](https://yarnpkg.com/getting-started)) instalado.
 
-Abra o prompt de comando no diretório do projeto na pasta <code>vanilla-ts-spa</code>, e execute os seguintes códigos:
+Abra o prompt de comando no diretório do projeto na pasta <code>vanilla-ts-spa-path-location</code>, e execute os seguintes códigos:
 
 <details>
   <summary><i>com <b>npm</b></i></summary>
