@@ -29,7 +29,7 @@ export class AnimeDetailPage extends AbstractPage {
   async getStyles(): Promise<HTMLStyleElement> {
     const $style = document.createElement("style");
     $style.innerHTML = `
-    .anime-quotes{
+    .anime-detail{
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
