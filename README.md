@@ -120,11 +120,17 @@ $ yarn start
 |        :page_facing_up:        |
 | :----------------------------: |
 |         CSS Variables          |
-|     Hash Location Routing      |
+|     Path Location Routing      |
 |          ES6 Modules           |
 |           fetch API            |
 |          Async Await           |
 | Fake Cache Using Local Storage |
+|          Mapped Types          |
+|        Index Signatures        |
+|       Singleton Pattern        |
+|    Template Method Pattern     |
+|         Class Heritage         |
+|          History API           |
 
 </div>
 
