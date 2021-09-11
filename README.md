@@ -3,8 +3,8 @@
 </p>
 
 <p align="center"> 
-  <img alt="Top Language" src="https://img.shields.io/github/languages/top/gleisonkz/vanilla-js-spa?color=3498db&style=for-the-badge">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gleisonkz/vanilla-js-spa?color=3498db&style=for-the-badge&label=Ultimo%20Commit">   
+  <img alt="Top Language" src="https://img.shields.io/github/languages/top/gleisonkz/vanilla-ts-spa?color=3498db&style=for-the-badge">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gleisonkz/vanilla-ts-spa?color=3498db&style=for-the-badge&label=Ultimo%20Commit">   
   <a href="https://github.com/gleisonkz">
     <img alt="Developed by Gleison" src="https://img.shields.io/badge/Developer-Gleison-%3498db?color=3498db&style=for-the-badge&label=Desenvolvedor">
   </a>  
@@ -30,7 +30,7 @@
 
 <div align="center">
 
-Deploy efetuado no [Netlify](https://www.netlify.com/) para visualizar: [Clique Aqui](https://vanilla-js-spa.netlify.app/)
+Deploy efetuado no [Netlify](https://www.netlify.com/) para visualizar: [Clique Aqui](https://https://vanilla-ts-spa.netlify.app/)
 
 |                         :computer:Preview 1                         |                        :computer: Preview 2                         |
 | :-----------------------------------------------------------------: | :-----------------------------------------------------------------: |
