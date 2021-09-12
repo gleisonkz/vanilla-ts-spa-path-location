@@ -121,19 +121,20 @@ $ yarn start
 
 <div align="center">
 
-|        :page_facing_up:        |
-| :----------------------------: |
-|         CSS Variables          |
-|          ES6 Modules           |
-|           fetch API            |
-|          Async Await           |
-| Fake Cache Using Local Storage |
-|          Mapped Types          |
-|        Index Signatures        |
-|       Singleton Pattern        |
-|    Template Method Pattern     |
-|          History API           |
-|     Path Location Routing      |
+|              :page_facing_up:              |
+| :----------------------------------------: |
+|               CSS Variables                |
+|                ES6 Modules                 |
+|                 fetch API                  |
+|                Async Await                 |
+|       Fake Cache Using Local Storage       |
+|                Mapped Types                |
+|              Index Signatures              |
+|             Singleton Pattern              |
+|          Template Method Pattern           |
+|                History API                 |
+|           Path Location Routing            |
+| Custom Decorators (Block UI CacheResponse) |
 
 </div>
 
