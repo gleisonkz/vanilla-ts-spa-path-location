@@ -9,7 +9,6 @@ const setAnchorListener = (event: Event) => {
   event.preventDefault();
   const element = event.target as HTMLElement;
   const hasDataLink = element.matches("[router-link]");
-
   if (!hasDataLink) return;
 
   const path = element.getAttribute("router-link");
