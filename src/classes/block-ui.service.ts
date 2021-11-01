@@ -1,5 +1,3 @@
-const BASE_URL = "https://animechan.vercel.app/api";
-
 export class BlockUIService {
   private static _instance: BlockUIService;
   private $overlay: HTMLDivElement = this.createLoadScreen();
@@ -42,7 +40,6 @@ export class BlockUIService {
   }
 
   show(): void {
-    console.log("show");
     this.$overlay.style.display = "flex";
   }
 
