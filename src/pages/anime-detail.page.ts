@@ -8,7 +8,7 @@ export class AnimeDetailPage extends AbstractPage {
     this.setTitle("Anime Detail");
   }
 
-  async getHtml(): Promise<string> {
+  override async getHtml(): Promise<string> {
     const quotes = await AnimesService.getAnimeQuotes(this.params.id);
 
     const html = quotes
@@ -27,7 +27,7 @@ export class AnimeDetailPage extends AbstractPage {
     return html;
   }
 
-  async getStyles(): Promise<HTMLStyleElement> {
+  override async getStyles(): Promise<HTMLStyleElement> {
     const $style = document.createElement("style");
     $style.innerHTML = `
     .anime-detail{

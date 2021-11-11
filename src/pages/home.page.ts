@@ -7,7 +7,7 @@ export class HomePage extends AbstractPage {
     this.setTitle("Home");
   }
 
-  async getHtml(): Promise<string> {
+  override async getHtml(): Promise<string> {
     return `
     <h1>Home</h1>
     <p>
@@ -28,7 +28,7 @@ export class HomePage extends AbstractPage {
 `;
   }
 
-  async getStyles(): Promise<HTMLStyleElement> {
+  override async getStyles(): Promise<HTMLStyleElement> {
     const $style = document.createElement("style");
     $style.innerHTML = `
     .home a {

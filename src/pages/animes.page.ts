@@ -8,7 +8,7 @@ export class AnimesPage extends AbstractPage {
     this.setTitle("Animes");
   }
 
-  async getHtml(): Promise<string> {
+  override async getHtml(): Promise<string> {
     const animes = await AnimesService.getAnimes();
 
     const html = animes
@@ -26,7 +26,7 @@ export class AnimesPage extends AbstractPage {
     return html;
   }
 
-  async getStyles(): Promise<HTMLStyleElement> {
+  override async getStyles(): Promise<HTMLStyleElement> {
     const $style = document.createElement("style");
 
     $style.innerHTML = `

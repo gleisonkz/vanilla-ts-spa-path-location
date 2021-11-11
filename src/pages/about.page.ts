@@ -7,7 +7,7 @@ export class AboutPage extends AbstractPage {
     this.setTitle("About");
   }
 
-  async getHtml(): Promise<string> {
+  override async getHtml(): Promise<string> {
     return `
     <address>
     <div>
@@ -44,7 +44,7 @@ export class AboutPage extends AbstractPage {
 `;
   }
 
-  async getStyles(): Promise<HTMLStyleElement> {
+  override async getStyles(): Promise<HTMLStyleElement> {
     const $style = document.createElement("style");
     $style.innerHTML = `
           .about {
