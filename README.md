@@ -30,7 +30,7 @@
 
 <div align="center">
 
-Deploy efetuado no [Netlify](https://www.netlify.com/) para visualizar: [Clique Aqui](https://https://vanilla-ts-spa.netlify.app/)
+Deploy efetuado no [Netlify](https://www.netlify.com/) para visualizar: [Clique Aqui](https://vanilla-ts-spa.netlify.app/)
 
 |                         :computer:Preview 1                         |                        :computer: Preview 2                         |
 | :-----------------------------------------------------------------: | :-----------------------------------------------------------------: |
